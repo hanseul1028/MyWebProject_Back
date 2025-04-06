@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: start
+  datasource:
+    url: jdbc:oracle:thin:@112.221.156.34:12345:XE
+    username: KH09_KHS
+    password: KH1234
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  profiles:
+    include: private
+  mvc: 
+    static-path-pattern: /uploads/**
+  web:
+    resources:
+      static-location: file:uploads/
+
+server:
+  port: 80
+
+servlet:
+  multipart:
+    max-file-size: 100MB
+    max-request-size: 100MB
+ 
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    jdbc-type-for-null: VARCHAR
+  mapper-locations: classpath:mapper/*.xml
+  level:
+      org.apache.ibatis: DEBUG
+      java.sql: DEBUG 
+      jdbc.sqlonly: DEBUG
+      jdbc.resultset: DEBUG
+      jdbc.audit: DEBUG
