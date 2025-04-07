@@ -10,8 +10,8 @@ import lombok.Value;
 public class Member {
 
 	private Long memberNo;
-	private String memberId;
 	private String memberPw;
+	private String memberId;
 	private String memberName;
 	private String email;
 }

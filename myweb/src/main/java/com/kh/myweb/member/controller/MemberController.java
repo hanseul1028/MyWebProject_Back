@@ -29,5 +29,22 @@ public class MemberController {
 		
 		return ResponseEntity.ok().build();
 	}
+	
+	
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
